@@ -1,6 +1,7 @@
 package client;
 
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 public class BaseClient {
@@ -11,6 +12,6 @@ public class BaseClient {
     protected RequestSpecification getRequestSpecification() {
         return RestAssured.given()
                 .baseUri(BASE_URL)
-                .header("Content-Type", "application/json");
+                .contentType(ContentType.JSON);
     }
 }
