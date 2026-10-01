@@ -8,7 +8,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import utils.CourierGenerator;
-import org.junit.Ignore;
 
 import java.util.UUID;
 
@@ -103,7 +102,6 @@ public class CourierLoginTest {
                         equalTo("Учетная запись не найдена"));
     }
 
-    @Ignore("Дефект стенда: при отсутствии password API возвращает 504 вместо 400")
     @Test
     public void courierCannotLoginWithoutPassword() {
         CourierCredentials credentials = new CourierCredentials(
