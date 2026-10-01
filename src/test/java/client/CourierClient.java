@@ -32,4 +32,11 @@ public class CourierClient extends BaseClient {
                 .when()
                 .delete(COURIER_PATH + "/" + courierId);
     }
+
+    @Step("Удаление курьера без передачи id")
+    public Response deleteWithoutId() {
+        return getRequestSpecification()
+                .when()
+                .delete(COURIER_PATH + "/");
+    }
 }
